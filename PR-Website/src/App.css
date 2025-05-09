@@ -114,27 +114,12 @@ img {
   width: 80px;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  bottom: 5%;
-}
-
-.carousel-control-prev {
-  left: 5%;
-}
-
-.carousel-control-next {
-  right: 2%;
-}
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #333 !important;
+  display:none;
 }
+
+
 
 .btn-close-white {
   font-size: 10px;
