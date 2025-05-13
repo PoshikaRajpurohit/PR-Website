@@ -41,6 +41,7 @@ body{
 }
 
 .menu-title > a.nav-link:hover,
+.navbar-nav .dropdown-menu .dropdown-item:hover,
 .menu-title > a.nav-link:active,
 .menu-title> a.Nav .dropdown-item {
   color: #ff4137 !important;
