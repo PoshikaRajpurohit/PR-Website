@@ -15,6 +15,8 @@ body{
   margin: 0;
   padding: 0;
 }
+
+/* HEADER */
 .header {
   max-width: 1200px;
   margin: 0 auto;
@@ -43,6 +45,25 @@ body{
 .menu-title> a.Nav .dropdown-item {
   color: #ff4137 !important;
 }
+.dropdown-menu.show {
+  display: block !important;
+}
+ .dropdown-menu {
+  border: none !important;
+  padding: 20px;
+  margin-top: 25px !important;;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.mega-menu {
+  width: 1200px !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: #fff;
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+/* MOBILE-HEADER */
+
 .accordion-dark .accordion-item,
 .accordion-dark .accordion-body,
 .accordion-dark .accordion-button {
@@ -65,24 +86,25 @@ body{
   color: #fff !important;
   border: none !important;
 }
-.dropdown-menu.show {
-  display: block !important;
+.btn-close-white {
+  font-size: 10px;
+  color: #fff !important;
+  opacity: 1 !important;
+  border: 3px solid #707d89 !important;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  right: 25px;
 }
- .dropdown-menu {
-  border: none !important;
-  padding: 20px;
-  margin-top: 25px !important;;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+
+.contact-info li a {
+  color: #fffc;
 }
-.mega-menu {
-  width: 1200px !important;
-  left: 0 !important;
-  right: 0 !important;
-  background: #fff;
-  padding: 20px;
-  border-top: 1px solid #eee;
-}
- 
+/*  TESTIMONIAL */
+
+
 .TestimonialContainer {
   width: 100%;
   padding: 100px 0;
@@ -119,24 +141,8 @@ img {
   display:none;
 }
 
+/* FOOTER */
 
-
-.btn-close-white {
-  font-size: 10px;
-  color: #fff !important;
-  opacity: 1 !important;
-  border: 3px solid #707d89 !important;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  position: absolute;
-  top: 25px;
-  right: 25px;
-}
-
-.contact-info li a {
-  color: #fffc;
-}
 footer a:hover {
   color: #ff4137 !important; 
   text-decoration: underline !important; 
@@ -156,7 +162,7 @@ footer a:hover {
   font-size: 16px;
   border: none;
   border-radius: 0px;
-  background-color: #1B1B1B; /* Black background */
+  background-color: #1B1B1B;
   z-index: 1;
   transition: color 0.4s ease;
 }
@@ -180,7 +186,7 @@ footer a:hover {
 }
 
 .f-btn:hover {
-  background-color: #1B1B1B; /* Stay black after red slides out */
+  background-color: #1B1B1B;
   color: white;
 }
 
