@@ -33,11 +33,8 @@ const Header = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  const handleMouseEnter = (name) => {
-    setOpenDropdown(name);
-  };
-  const handleMouseLeave = () => {
-    setOpenDropdown(null);
+  const handleClick = (menu) => {
+    setOpenDropdown((prev) => (prev === menu ? null : menu));
   };
   const handleDropdownClick = () => {
     setShowSidebar(false);
@@ -164,7 +161,7 @@ const Header = () => {
         <Navbar.Toggle aria-controls="main-navbar" />
         <Navbar.Collapse id="main-navbar" className="justify-content-between">
           <Nav className="mx-auto navbar-nav text-black ">
-            <div onMouseEnter={() => handleMouseEnter('home')} onMouseLeave={handleMouseLeave}>
+            <div onClick={()=> handleClick('home')}>
               <NavDropdown title="Home" show={openDropdown === 'home'} className=" menu-title">
                 {homePages.map((item, index) => (
                   <NavDropdown.Item key={index}  className="text-black"> 
@@ -173,7 +170,7 @@ const Header = () => {
                 ))}
               </NavDropdown>
             </div>
-            <div onMouseEnter={() => handleMouseEnter('pages')} onMouseLeave={handleMouseLeave}>
+            <div onClick={()=> handleClick('pages')}>
               <NavDropdown title="Pages" show={openDropdown === 'pages'} className=" menu-title">
                 {pages.map((item, index) => (
                   <NavDropdown.Item key={index} className="text-black" >
@@ -182,7 +179,7 @@ const Header = () => {
                 ))}
               </NavDropdown>
             </div>
-           <div onMouseEnter={() => handleMouseEnter('Shop')} onMouseLeave={handleMouseLeave}>
+           <div onClick={()=> handleClick('Shop')}>
               <NavDropdown
                 title={<span className="text-black menu-title" >Shop <span className="badge bg-danger ">Hot</span></span>}
                 id="shop-dropdown"show={openDropdown === 'Shop'}className="position-static  "
@@ -209,7 +206,7 @@ const Header = () => {
               </NavDropdown>
             </div>
 
-            <div onMouseEnter={() => handleMouseEnter('Elements')} onMouseLeave={handleMouseLeave}>
+            <div onClick={()=> handleClick('Elements')}>
               <NavDropdown
                 title="Elements"
                 id="elements-dropdown"
@@ -237,7 +234,7 @@ const Header = () => {
                 </Container>
               </NavDropdown>
             </div>
-            <div onMouseEnter={() => handleMouseEnter('blog')} onMouseLeave={handleMouseLeave}>
+            <div onClick={()=> handleClick('blog')}>
               <NavDropdown title="Blog" show={openDropdown === 'blog'} className=" menu-title">
                 {blogPages.map((item, index) => (
                   <NavDropdown.Item
